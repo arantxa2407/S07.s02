@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Estudiantes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+      <a href="index.html" class="back-button">Regresar a Inicio</a>
+
+        <h1>Sistema de Docentes</h1>
+        
+        <form id="docenteForm">
+          <input type="text" id="name" placeholder="Nombre" required>
+          <input type="text" id="codigo" placeholder="Codigo Docente" required>
+          <input type="email" id="email" placeholder="Correo electrónico" required>
+          <input type="text" id="carrera" placeholder="Carrera" required>
+            <button type="submit">Agregar Docente</button>
+        </form>
+
+        <table id="docenteTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Codigo Docente</th>
+                    <th>Correo electrónico</th>
+                    <th>Carrera</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <!-- Modal para editar estudiante -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Profesor</h2>
+            <form id="editForm">
+                <input type="hidden" id="editId">
+                <input type="text" id="name" placeholder="Nombre" required>
+                <input type="text" id="codigo" placeholder="Codigo Docente" required>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="text" id="carrera" placeholder="Carrera" required>
+                      <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/profes.js"></script>
+</body>
+</html>
